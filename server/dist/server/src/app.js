@@ -17,13 +17,15 @@ const express_1 = __importDefault(require("express"));
 const http_1 = __importDefault(require("http"));
 const socket_io_1 = require("socket.io");
 const mqtt_1 = __importDefault(require("mqtt"));
+//todo input validation
+//todo fix codestyle
 const app = (0, express_1.default)();
 exports.server = http_1.default.createServer(app);
 const io = new socket_io_1.Server(exports.server, { cors: {
         credentials: true
     } });
 const mqClient = mqtt_1.default.connect('mqtt://localhost:1883');
-const rootHandler = (_, res) => res.status(201).json({ test: 'ok' });
+const rootHandler = (_, res) => res.status(201).json({ test: 'ok' }); // only for test
 const globalState = {
     value: 25,
     locker: null
@@ -35,9 +37,9 @@ io.on('connection', (socket) => __awaiter(void 0, void 0, void 0, function* () {
         return __awaiter(this, void 0, void 0, function* () {
             console.log('inside registry');
             users[`${socket.id}`] = data;
-            console.log(users);
             //@ts-ignore
-            this.emit('getStateOnInitial', JSON.stringify(globalState));
+            const that = this; // this in this context is specified socket witch emit event only on emmiter connection
+            that.emit('getStateOnInitial', JSON.stringify(globalState));
         });
     });
     socket.on('stateChange', (data) => __awaiter(void 0, void 0, void 0, function* () {

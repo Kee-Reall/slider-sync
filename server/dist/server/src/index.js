@@ -10,10 +10,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = require("./app");
+const config_class_1 = require("../../client/src/config.class");
 function bootstrap() {
     return __awaiter(this, void 0, void 0, function* () {
-        yield app_1.server.listen(3000);
-        console.log('Application has started on port: ' + 3000);
+        yield app_1.server.listen(config_class_1.config.port);
+        console.log('Application has started on port: ' + config_class_1.config.port);
     });
 }
 bootstrap().catch((e) => console.error(e === null || e === void 0 ? void 0 : e.message));
