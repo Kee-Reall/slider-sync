@@ -141,6 +141,18 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.0.tgz#5fb2e536c1ae9bf35366eed879e827fa59ca41c2"
   integrity sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==
 
+"@types/mqtt@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@types/mqtt/-/mqtt-2.5.0.tgz#bc54c2d53f509282168da4a9af865de95bee5101"
+  integrity sha512-n+0/ErBin30j+UbhcHGK/STjHjh65k85WNR6NlUjRG0g9yctpF12pS+SOkwz0wmp+7momAo9Cyi4Wmvy8UsCQg==
+  dependencies:
+    mqtt "*"
+
+"@types/paho-mqtt@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@types/paho-mqtt/-/paho-mqtt-1.0.6.tgz#e296c4c7f38e5ef0774ca539ef082a12d5111706"
+  integrity sha512-d6CXsdv2fEruyZLe5DUtgGsF8ROp0358OrEmVgqtFxO/kiCvP9KhYen9N6ReKBkMdR/d0parLQq6DMn2qe6d9Q==
+
 "@types/pug@^2.0.6":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@types/pug/-/pug-2.0.6.tgz#f830323c88172e66826d0bde413498b61054b5a6"
@@ -493,7 +505,7 @@ is-builtin-module@^3.2.1:
   dependencies:
     builtin-modules "^3.3.0"
 
-is-core-module@^2.9.0:
+is-core-module@^2.11.0:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.11.0.tgz#ad4cb3e3863e814523c96f3f58d26cc570ff0144"
   integrity sha512-RRjxlvLDkD1YJwDbroBHMb+cukurkDWNyHx7D3oNB5x9rb5ogcksMC5wHCadcXoo67gVr/+3GFySh3134zi6rw==
@@ -631,7 +643,7 @@ mqtt-packet@^6.8.0:
     debug "^4.1.1"
     process-nextick-args "^2.0.1"
 
-mqtt@^4.3.7:
+mqtt@*, mqtt@^4.3.7:
   version "4.3.7"
   resolved "https://registry.yarnpkg.com/mqtt/-/mqtt-4.3.7.tgz#42985ca490ea25d2c12c119d83c632db6dc9d589"
   integrity sha512-ew3qwG/TJRorTz47eW46vZ5oBw5MEYbQZVaEji44j5lAUSQSqIEoul7Kua/BatBW0H0kKQcC9kwUHa1qzaWHSw==
@@ -778,11 +790,11 @@ resolve.exports@^2.0.0:
   integrity sha512-X2UW6Nw3n/aMgDVy+0rSqgHlv39WZAlZrXCdnbyEiKm17DSqHX4MmQMaST3FbeWR5FTuRcUwYAziZajji0Y7mg==
 
 resolve@^1.22.1:
-  version "1.22.1"
-  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.1.tgz#27cb2ebb53f91abb49470a928bba7558066ac177"
-  integrity sha512-nBpuuYuY5jFsli/JIs1oldw6fOQCBioohqWZg/2hiaOybXOft4lonv85uDOKXdf8rhyK159cxU5cDcK/NKk8zw==
+  version "1.22.2"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.22.2.tgz#0ed0943d4e301867955766c9f3e1ae6d01c6845f"
+  integrity sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==
   dependencies:
-    is-core-module "^2.9.0"
+    is-core-module "^2.11.0"
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
